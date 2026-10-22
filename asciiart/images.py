@@ -15,3 +15,8 @@ def get_pixel_matrix(image):
             row.append(pixels[x, y])
         matrix.append(row)
     return matrix
+
+def resize_image(image, new_width):
+    width, height = image.size
+    new_height = max(1, round(height * new_width / width))
+    return image.resize((new_width, new_height))
