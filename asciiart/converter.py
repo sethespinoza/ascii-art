@@ -28,4 +28,9 @@ def get_ascii_matrix(brightness_matrix):
         result.append(char_row)
     return result
 
+def ascii_matrix_to_text(ascii_matrix, stretch=2):
+    lines = ["".join(char * stretch for char in row) for row in ascii_matrix]
+    return "\n".join(lines)
+    
+
         
